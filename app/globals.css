@@ -3,14 +3,23 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f1f1f1;
+  --foreground: #313131;
+  --color-bali: #000000;
+  --primary-color: #007bff;
+  --border-color: rgba(255, 255, 255, 0.86);
+  --contact-tile-color: #313131;
+  --side-bar-color: #e4e4e4;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #10121A;
+    --foreground: #a4acc4;
+    --color-bali: #ffffff;
+    --border-color: #2e344e;
+    --contact-tile-color: #ffffff;
+    --side-bar-color: #191d2b;
   }
 }
 
@@ -18,4 +27,42 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.navitem {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.item::before {
+  content: "";
+  @apply absolute bottom-0 left-0 h-1/2 bg-primary opacity-60;
+  transition: all 0.3s cubic-bezier(0.215, 0.610, 0.355, 1);
+  z-index: 3;
+}
+
+.item:hover::before {
+  width: 100%;
+  height: 100%;
+}
+
+.icon {
+  @apply flex items-center justify-center rounded-full transition-all duration-500 ease-in-out border-2 border-border_color cursor-pointer;
+  
+  svg {
+    @apply m-2
+  }
+}
+
+.spans {
+  @apply text-primary
+}
+
+h1 {
+  @apply text-5xl text-color_bali
+}
+
+h6 {
+  @apply text-color_bali text-xl mb-2
 }

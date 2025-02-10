@@ -1,16 +1,7 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Sidebar from "@/components/ui/Sidebar";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -24,10 +15,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body className="flex flex-row w-screen overflow-x-hidden">
+        <Sidebar />
+        <main className="relative flex-1 min-h-screen">
+          {/* Grille de lignes en arrière-plan */}
+          <div className="absolute inset-0 flex justify-evenly pointer-events-none z-[-1]">
+            <div className="w-px h-full bg-border_color"></div>
+            <div className="w-px h-full bg-border_color"></div>
+            <div className="w-px h-full bg-border_color"></div>
+            <div className="w-px h-full bg-border_color"></div>
+          </div>
+          {children}
+        </main>
       </body>
     </html>
   );

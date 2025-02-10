@@ -11,6 +11,11 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        primary: "var(--primary-color)",
+        color_bali: "var(--color-bali)",
+        border_color: "var(--border-color)",
+        contact_tile_color: "var(--contact-tile-color)",
+        side_bar_color: "var(--side-bar-color)"
       },
     },
   },
