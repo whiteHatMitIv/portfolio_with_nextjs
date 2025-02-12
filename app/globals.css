@@ -10,6 +10,9 @@
   --border-color: rgba(255, 255, 255, 0.86);
   --contact-tile-color: #313131;
   --side-bar-color: #e4e4e4;
+  --bg: rgba(3, 127, 255, 0.3);
+  --titleSpanColor: rgba(25, 29, 43, 0.44);
+  --backgroundCard: rgba(210, 210, 213, 0.94);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -20,6 +23,8 @@
     --border-color: #2e344e;
     --contact-tile-color: #ffffff;
     --side-bar-color: #191d2b;
+    --titleSpanColor: rgba(222, 222, 222, 0.47);
+    --backgroundCard: #191D2B;
   }
 }
 
@@ -65,4 +70,34 @@ h1 {
 
 h6 {
   @apply text-color_bali text-xl mb-2
+}
+
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+@keyframes gradient-pulse {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.button-gradient {
+  animation: gradient-pulse 8s ease infinite;
+}
+
+.styleh2::before {
+  content: "";
+  @apply absolute bottom-0 w-32 h-1 bg-backTitle rounded-lg left-0;
+}
+
+.styleh2::after {
+  content: "";
+  @apply absolute bottom-0 w-14 h-1 bg-primary rounded-lg left-0
+}
+
+.souligne::after {
+  content: "";
+  @apply absolute w-16 bg-border_color h-[3px] left-1/2 bottom-0 rounded-lg;
+  transform: translateX(-50%);
 }

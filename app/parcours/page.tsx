@@ -1,8 +1,12 @@
-import React from 'react'
+import Skills from '@/components/ui/section/Skills'
+import Technology from '@/components/ui/section/Technology'
 
 const Parcours = () => {
   return (
-    <div>Parcours</div>
+    <div>
+      <Skills />
+      <Technology />
+    </div>
   )
 }
 

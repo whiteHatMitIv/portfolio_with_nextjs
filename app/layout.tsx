@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Sidebar from "@/components/ui/Sidebar";
+import { inter, SpaceGrotesk } from "./fonts";
 
 
 export const metadata: Metadata = {
@@ -10,24 +11,27 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
-      <body className="flex flex-row w-screen overflow-x-hidden">
+    <html lang="fr" className={`${SpaceGrotesk.variable} ${inter.variable}`}>
+      <body className="font-body flex flex-row w-screen h-screen overflow-hidden">
         <Sidebar />
-        <main className="relative flex-1 min-h-screen">
-          {/* Grille de lignes en arrière-plan */}
-          <div className="absolute inset-0 flex justify-evenly pointer-events-none z-[-1]">
-            <div className="w-px h-full bg-border_color"></div>
-            <div className="w-px h-full bg-border_color"></div>
-            <div className="w-px h-full bg-border_color"></div>
-            <div className="w-px h-full bg-border_color"></div>
+
+        <main id="main-content" className="relative flex-1 h-screen overflow-y-auto">
+          <div className="relative min-h-full">
+            <div className="absolute inset-0 flex justify-evenly pointer-events-none z-[-1]">
+              {[...Array(4)].map((_, i) => (
+                <div 
+                  key={i}
+                  className="w-px h-full bg-border_color"
+                />
+              ))}
+            </div>
+            {children}
           </div>
-          {children}
         </main>
       </body>
     </html>
   );
 }
+

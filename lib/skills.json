@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "title": "HTML5",
+        "percent": "85%",
+        "text": "85%"
+    },
+    {
+        "id": 2,
+        "title": "CSS3",
+        "percent": "80%",
+        "text": "80%"
+    },
+    {
+        "id": 3,
+        "title": "JAVASCRIPT",
+        "percent": "78%",
+        "text": "78%"
+    },
+    {
+        "id": 4,
+        "title": "PYTHON",
+        "percent": "92%",
+        "text": "92%"
+    },
+    {
+        "id": 5,
+        "title": "JAVA",
+        "percent": "70%",
+        "text": "70%"
+    },
+    {
+        "id": 6,
+        "title": "DART",
+        "percent": "83%",
+        "text": "83%"
+    },
+    {
+        "id": 7,
+        "title": "C/C++",
+        "percent": "62%",
+        "text": "62%"
+    }
+]

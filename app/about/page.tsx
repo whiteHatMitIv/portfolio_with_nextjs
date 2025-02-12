@@ -1,4 +1,5 @@
 import ImageSection from '@/components/ui/section/ImageSection'
+import ServiceSection from '@/components/ui/section/ServiceSection'
 import Title from '@/components/ui/Title'
 import React from 'react'
 
@@ -8,6 +9,7 @@ const About = () => {
       <div>
         <Title title='Qui suis-je?' span='Qui suis-je?' />
         <ImageSection  />
+        <ServiceSection />
       </div>
     </div>
   )

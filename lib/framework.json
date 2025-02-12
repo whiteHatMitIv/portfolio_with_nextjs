@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "icon": "/assets/nextjs.svg",
+        "alt": "Icône de NextJs",
+        "title": "NextJs"
+    },
+    {
+        "id": 2,
+        "icon": "/assets/react.svg",
+        "alt": "Icône de React",
+        "title": "React"
+    },
+    {
+        "id": 3,
+        "icon": "/assets/flutter.svg",
+        "alt": "Icône de Flutter",
+        "title": "Flutter"
+    }
+]

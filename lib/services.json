@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "image": "/assets/web_dev.svg",
+        "title": "Développement web",
+        "paragraph": "Conception de sites modernes, performants et adaptés à vos besoins pour une expérience utilisateur optimale."
+    },
+    {
+        "id": 2,
+        "image": "/assets/mobile_dev.svg",
+        "title": "Développement mobile",
+        "paragraph": "Création d'applications mobiles performantes et intuitives, adaptées à vos besoins et à vos utilisateurs."
+    },
+    {
+        "id": 3,
+        "image": "/assets/AI.svg",
+        "title": "Intelligence artificielle et MachineLearning",
+        "paragraph": "Développement de solutions intelligentes pour automatiser, analyser et optimiser vos processus."
+    },
+    {
+        "id": 4,
+        "image": "/assets/logiciel.svg",
+        "title": "Développement logiciel",
+        "paragraph": "Conception de logiciels sur mesure, fiables et performants, adaptés à vos besoins spécifiques."
+    },
+    {
+        "id": 5,
+        "image": "/assets/data.svg",
+        "title": "Analyse de données et Data Science",
+        "paragraph": "Exploitation des données pour extraire des insights, optimiser vos décisions et créer de la valeur."
+    }
+]

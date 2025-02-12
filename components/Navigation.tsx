@@ -74,12 +74,12 @@ function NavLink({ href, icon: Icon, children, collapsed }: NavLinkProps) {
     return (
         <Link
             href={href}
-            className={`item flex items-center ${collapsed ? "justify-start pl-9" : "justify-center"} gap-4 text-lg py-1 z-10 uppercase font-semibold hover:cursor-pointer hover:text-foreground transition-all duration-300 ease-in-out ${pathname === href ? "bg-primary text-white" : ""}`}
+            className={`item flex items-center justify-center gap-4 text-lg py-1 z-10 uppercase font-semibold hover:cursor-pointer hover:text-foreground transition-all duration-300 ease-in-out ${pathname === href ? "bg-primary text-white" : ""}`}
         >
-            <Icon className="h-7 w-7" />
-            {collapsed && (
-                <p className='tracking-wide'>{children}</p>
-            )}
+            {collapsed
+             ? <p className='tracking-wide'>{children}</p>
+             : <Icon className="h-7 w-7" />
+            }
         </Link>
     )
 }

@@ -6,13 +6,14 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import Navigation from "../Navigation";
 
 export default function Sidebar() {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className="relative flex">
       {/* Sidebar animé */}
       <motion.div
-        initial={{ width: "18vw" }}
+      
+        initial={{ width: "6vw" }}
         animate={{ width: isOpen ? "18vw" : "6vw" }}
         transition={{ duration: 0.3 }}
         className="h-screen bg-side_bar_color text-foreground shadow-lg flex flex-col items-center"
