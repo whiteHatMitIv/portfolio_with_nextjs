@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "period": "Oct 2024 - Aujourd'hui",
+        "diplome": "Licence en Génie Logiciel",
+        "lieu": "IUT-Douala",
+        "mention": ""
+    },
+    {
+        "id": 2,
+        "period": "Oct 2022 - Jul 2024",
+        "diplome": "DUT en Informatique",
+        "lieu": "IUT-Douala",
+        "mention": "Mention Bien"
+    },
+    {
+        "id": 3,
+        "period": "Sept 2021 - Jul 2022",
+        "diplome": "Baccalaureat",
+        "lieu": "Collège Libermann",
+        "mention": "Mention Bien"
+    },
+    {
+        "id": 4,
+        "period": "Sept 2020 - Jul 2021",
+        "diplome": "Probatoire",
+        "lieu": "Collège Libermann",
+        "mention": "Mention Bien"
+    }
+]

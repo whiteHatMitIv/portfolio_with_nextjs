@@ -45,7 +45,7 @@ const Technology = () => {
             <motion.div 
               key={tech.id}
               variants={cardVariants}
-              className="relative flex items-center justify-center h-32 bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl rounded-2xl border border-gray-700/50 hover:border-blue-400/50 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/20 hover:-translate-y-2"
+              className="relative cursor-pointer flex items-center justify-center h-32 bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl rounded-2xl border border-gray-700/50 hover:border-blue-400/50 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/20 hover:-translate-y-2"
             >
               <Image 
                 src={tech.icon} 
