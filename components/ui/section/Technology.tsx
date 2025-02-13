@@ -14,7 +14,7 @@ const containerVariants = {
       when: "beforeChildren"
     }
   }
-};
+}
 
 const cardVariants = {
   hidden: { opacity: 0 },
@@ -26,7 +26,7 @@ const cardVariants = {
       damping: 20 
     }
   }
-};
+}
 
 const Technology = () => {
   return (
