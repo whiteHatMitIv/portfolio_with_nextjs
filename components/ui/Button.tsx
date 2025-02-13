@@ -12,16 +12,14 @@ const buttonVariants = cva(
     variants: {
       variant: {
         contact: [
-          "bg-gradient-to-br from-cyan-400/80 via-blue-600 to-indigo-700",
-          "dark:from-cyan-300/80 dark:via-blue-500 dark:to-indigo-600",
+          "bg-gradient-to-br from-cyan-300/80 via-blue-500 to-indigo-600",
           "hover:bg-[length:400%_400%] bg-[length:200%_200%]",
-          "border-cyan-200/30 dark:border-cyan-300/20"
+          "border-cyan-300/20"
         ],
         cv: [
-          "bg-gradient-to-br from-purple-500 via-indigo-600 to-sky-500",
-          "dark:from-purple-400/90 dark:via-indigo-500 dark:to-sky-400",
+          "bg-gradient-to-br from-purple-400/90 via-indigo-500 to-sky-400",
           "hover:bg-[length:400%_400%] bg-[length:200%_200%]",
-          "border-purple-200/30 dark:border-purple-300/20"
+          "border-purple-300/20"
         ],
       },
     },

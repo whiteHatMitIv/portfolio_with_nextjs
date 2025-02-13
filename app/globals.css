@@ -3,29 +3,16 @@
 @tailwind utilities;
 
 :root {
-  --background: #f1f1f1;
-  --foreground: #313131;
-  --color-bali: #000000;
+  --background: #10121A;
+  --foreground: #a4acc4;
+  --color-bali: #ffffff;
+  --border-color: #2e344e;
+  --contact-tile-color: #ffffff;
+  --side-bar-color: #191d2b;
+  --titleSpanColor: rgba(222, 222, 222, 0.47);
+  --backgroundCard: #191D2B;
   --primary-color: #007bff;
-  --border-color: rgba(255, 255, 255, 0.86);
-  --contact-tile-color: #313131;
-  --side-bar-color: #e4e4e4;
   --bg: rgba(3, 127, 255, 0.3);
-  --titleSpanColor: rgba(25, 29, 43, 0.44);
-  --backgroundCard: rgba(210, 210, 213, 0.94);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #10121A;
-    --foreground: #a4acc4;
-    --color-bali: #ffffff;
-    --border-color: #2e344e;
-    --contact-tile-color: #ffffff;
-    --side-bar-color: #191d2b;
-    --titleSpanColor: rgba(222, 222, 222, 0.47);
-    --backgroundCard: #191D2B;
-  }
 }
 
 body {
