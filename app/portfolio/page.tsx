@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useState } from 'react'
-import { motion } from 'framer-motion'
+import { easeInOut, motion } from 'framer-motion'
 import { GitHub } from '@mui/icons-material'
 import { ExternalLink } from 'lucide-react'
 import Title from '@/components/ui/Title'
@@ -59,19 +59,19 @@ const Portfolio = () => {
             <motion.div
               key={project.id}
               variants={cardVariants}
-              className='flex flex-col relative border border-border_color border-t-8 h-[60vh] rounded-lg transition-all duration-500 ease-in-out hover:border-t-teal-500 hover:shadow-2xl hover:shadow-teal-500/20 overflow-hidden group hover:translate-y-2 hover:cursor-pointer'
+              className='flex flex-col relative border border-border_color border-t-8 h-[60vh] rounded-lg transition-all duration-500 ease-in-out hover:border-t-[#1E90FF] hover:shadow-2xl hover:shadow-[#1E90FF]/20 overflow-hidden group hover:translate-y-2 hover:cursor-pointer'
             >
               <div className='h-[50%] relative overflow-hidden border-b border-b-border_color'>
                 <Image
                   src={project.image}
                   alt={"image pour " + project.title}
                   fill={true}
-                  className='object-cover hover:scale-105 transition-transform duration-300'
+                  className='object-cover group-hover:scale-110 transition-transform duration-300'
                 />
               </div>
 
               <div className='relative flex flex-col flex-grow bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-2xl px-6 py-3'>
-                <h2 className='text-2xl font-semibold text-start text-teal-400 mb-2'>{project.title}</h2>
+                <h2 className='text-2xl font-semibold text-start text-[#007BFF] mb-2'>{project.title}</h2>
                 <p className='mb-4 flex-grow text-justify'>{project.text}</p>
 
                 <div className='flex absolute right-4 bottom-2 space-x-4 justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
@@ -80,7 +80,7 @@ const Portfolio = () => {
                       href={project.viewLink}
                       target='_blank'
                       rel='noopener noreferrer'
-                      className='flex items-center px-2 py-2 bg-teal-500 text-white rounded-full hover:bg-teal-600 transition-colors duration-300'
+                      className='flex items-center px-2 py-2 bg-[#1E90FF] text-white rounded-full hover:bg-teal-600 transition-colors duration-300'
                     >
                       <ExternalLink size={20} />
                     </Link>
@@ -101,21 +101,26 @@ const Portfolio = () => {
           ))}
         </motion.div>
 
-        <div className='flex justify-center mt-10 space-x-4'>
+        <motion.div 
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: easeInOut }}
+          className='flex justify-center mt-10 space-x-4'
+        >
           {Array.from({ length: Math.ceil(projects.length / cardsPerPage) }, (_, i) => (
             <button
               key={i + 1}
               onClick={() => paginate(i + 1)}
               className={`px-4 py-2 rounded-lg ${
                 currentPage === i + 1
-                  ? 'bg-teal-500 text-white'
+                  ? 'bg-[#1E90FF] text-white'
                   : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
               } transition-colors duration-300`}
             >
               {i + 1}
             </button>
           ))}
-        </div>
+        </motion.div>
       </div>
     </div>
   );
