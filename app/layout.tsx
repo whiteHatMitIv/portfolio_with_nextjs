@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Sidebar from "@/components/ui/Sidebar";
 import { inter, SpaceGrotesk } from "./fonts";
+import { Toaster } from 'react-hot-toast'
 
 
 export const metadata: Metadata = {
@@ -59,6 +60,8 @@ export default function RootLayout({
             {children}
           </div>
         </main>
+
+        <Toaster />
       </body>
     </html>
   );

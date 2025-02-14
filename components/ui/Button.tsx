@@ -2,7 +2,7 @@
 
 import { motion, MotionProps } from "framer-motion";
 import { cva, type VariantProps } from "class-variance-authority";
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/utils/utils";
 import React, { forwardRef } from "react";
 import { Add, Download } from "@mui/icons-material";
 
