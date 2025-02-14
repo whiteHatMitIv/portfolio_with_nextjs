@@ -77,7 +77,7 @@ function NavLink({ href, icon: Icon, children, collapsed, toggler }: NavLinkProp
     return (
         <Link
             href={href}
-            className={`md:item flex items-center justify-center gap-4 text-base py-1 z-10 uppercase font-semibold hover:cursor-pointer hover:text-foreground transition-all duration-300 ease-in-out ${pathname === href ? "bg-primary text-white" : ""}`}
+            className={`item flex items-center justify-center gap-4 text-base py-1 z-10 uppercase font-semibold hover:cursor-pointer hover:text-foreground transition-all duration-300 ease-in-out ${pathname === href ? "bg-primary text-white" : ""}`}
             onClick={toggler}
         >
             {collapsed
