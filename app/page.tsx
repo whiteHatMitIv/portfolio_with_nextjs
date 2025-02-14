@@ -27,7 +27,7 @@ export default function Home() {
   }
 
   return (
-    <div className="flex justify-center items-center w-full h-screen relative p-4">
+    <div className="flex justify-center items-center w-full md:h-screen relative p-4">
       <div className="absolute inset-0 z-[-1]">
         <ParticlesComponent id="particles" color="#FFF" />
       </div>
@@ -44,7 +44,7 @@ export default function Home() {
         </span>
         <div className="flex justify-center mt-6 gap-8">
           <Link
-            href="https://facebook.com"
+            href="https://web.facebook.com/ivan.yimi.1/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Lien vers Facebook"
@@ -53,7 +53,7 @@ export default function Home() {
             <FacebookIcon fontSize="large" />
           </Link>
           <Link
-            href="https://github.com"
+            href="https://github.com/whiteHatMitIv"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Lien vers GitHub"
@@ -62,7 +62,7 @@ export default function Home() {
             <GithubIcon fontSize="large" />
           </Link>
           <Link
-            href="https://twitter.com"
+            href="https://x.com/Ivan805030"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Lien vers Twitter"

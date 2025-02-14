@@ -21,7 +21,7 @@
         "id": 3,
         "category": "NextJs",
         "image": "/img/portfolio.jpeg",
-        "githubLink": "",
+        "githubLink": "https://github.com/whiteHatMitIv/portfolio_with_nextjs",
         "viewLink": "portfolio-with-nextjs-mu.vercel.app",
         "title": "Portfolio",
         "text": "Implémentation de ce portfolio avec NextJs"

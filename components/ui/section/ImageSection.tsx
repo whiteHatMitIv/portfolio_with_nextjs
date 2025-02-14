@@ -7,19 +7,20 @@ import { motion } from 'framer-motion'
 
 const ImageSection = () => {
   return (
-    <div className='flex gap-8 mt-12'>
+    <div className='flex flex-col gap-0 md:gap-8 mt-20 md:flex-row md:mt-12'>
       <motion.div 
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5 }}
-        className='w-2/3'
+        className='w-full max-md:flex max-md:justify-center md:w-2/3'
       >
         <Image
           src="/img/Me.jpg"
           alt='Mon profil'
           width={720}
           height={1280}
-          className='w-full h-full rounded-2xl'
+          priority={true}
+          className='w-2/3 md:w-full h-full rounded-2xl'
         />
       </motion.div>
       <div className='flex flex-col justify-between w-full pt-10'>
@@ -29,7 +30,7 @@ const ImageSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h4 className='text-3xl text-color_bali'>
+          <h4 className='text-3xl text-color_bali max-md:text-center'>
             Je suis <motion.span 
               className='spans text-3xl'
               initial={{ opacity: 0 }}
@@ -46,7 +47,7 @@ const ImageSection = () => {
           animate={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2, duration: 0.8 }}
-          className='py-3 text-justify'
+          className='py-3 text-justify max-md:text-lg md:text-justify'
         >
           <p>
             Etudiant en Génie Logiciel passionné par le développement informatique et la création de solutions innovantes. Mon parcours académique, combiné à mes projets personnels, m&rsquo;a permis d&rsquo;acquérir des compétences solides en conception logicielle, développement web et mobile, ainsi qu&rsquo;en gestion de données.
@@ -62,7 +63,7 @@ const ImageSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <div className='pr-8'>
+          <div className='pr-3 md:pr-8'>
             {["Nom", "Age", "Nationalité", "Langue", "Localisation"].map((label, index) => (
               <motion.p
                 key={label}
@@ -76,10 +77,10 @@ const ImageSection = () => {
             ))}
           </div>
           <div>
-            {["Ivan NTEUMI", "19", "Camerounais", "Français, Anglais", "Douala-Yassa, Cameroun"].map((value, index) => (
+            {["NTEUMI Y. T. Ivan Tresor", "19ans", "Camerounais", "Français, Anglais", "Douala-Yassa, Cameroun"].map((value, index) => (
               <motion.p
                 key={value}
-                className='py-3'
+                className='py-3 text-justify'
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: index * 0.1 + 0.4 }}
@@ -91,7 +92,7 @@ const ImageSection = () => {
         </motion.div>
 
         <motion.div 
-          className='flex gap-8 pb-2'
+          className='flex gap-8 pb-2 justify-between'
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}

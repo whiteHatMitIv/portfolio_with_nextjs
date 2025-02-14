@@ -35,7 +35,7 @@ const ServiceSection = () => {
       <Title title='Services' span='Services' subTitle={true} />
     
       <motion.div
-        className='grid mt-12 grid-cols-3 grid-rows-2 gap-5 auto-rows-fr'
+        className='grid mt-12 grid-cols-1 gap-8 md:gap-5 auto-rows-fr md:grid-cols-3'
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"

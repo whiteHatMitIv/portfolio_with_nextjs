@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "icon": "phone",
+        "title": "Telephone",
+        "contact1": "+237 658-339-863",
+        "contact2": "+237 650-162-592"
+    },
+    {
+        "id": 2,
+        "icon": "email",
+        "title": "Email",
+        "contact1": "ivannteumi@gmail.com",
+        "contact2": "taopaipai275@gmail.com"
+    },
+    {
+        "id": 3,
+        "icon": "address",
+        "title": "Adresse",
+        "contact1": "Yassa-Douala, Cameroun",
+        "contact2": ""
+    }
+]

@@ -20,8 +20,9 @@ const Navigation= ({ isOpen }: NavigationProps) => {
                     src="/img/Me2.jpg"
                     width={80}
                     height={80}
+                    priority={true}
                     alt='My profile'
-                    className={`${isOpen ? "w-7/12 border-8" : "w-9/12 border-3"} rounded-full border-border_color transition-all duration-300 ease-in-out`}
+                    className={`${isOpen ? "w-7/12 border-4" : "w-9/12 border-3"} rounded-full border-border_color transition-all duration-300 ease-in-out`}
                 />
             </div>
             <ul className="w-full h-full flex flex-col gap-2 justify-center items-center">
@@ -74,7 +75,7 @@ function NavLink({ href, icon: Icon, children, collapsed }: NavLinkProps) {
     return (
         <Link
             href={href}
-            className={`item flex items-center justify-center gap-4 text-lg py-1 z-10 uppercase font-semibold hover:cursor-pointer hover:text-foreground transition-all duration-300 ease-in-out ${pathname === href ? "bg-primary text-white" : ""}`}
+            className={`md:item flex items-center justify-center gap-4 text-base py-1 z-10 uppercase font-semibold hover:cursor-pointer hover:text-foreground transition-all duration-300 ease-in-out ${pathname === href ? "bg-primary text-white" : ""}`}
         >
             {collapsed
              ? <p className='tracking-wide'>{children}</p>

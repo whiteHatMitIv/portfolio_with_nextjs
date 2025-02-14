@@ -66,6 +66,8 @@ const Portfolio = () => {
                   src={project.image}
                   alt={"image pour " + project.title}
                   fill={true}
+                  sizes='(max-width: 768px) 90vw, 35vw'
+                  priority
                   className='object-cover group-hover:scale-110 transition-transform duration-300'
                 />
               </div>
