@@ -135,12 +135,19 @@ const ContactForm = () => {
                     ></motion.textarea>
                     {errors.message && <span className='text-red-500'>{errors.message.message}</span>}
                 </motion.div>
-                <button
-                    type='submit'
-                    className='button-gradient bg-red-400 text-white max-md:w-2/3'
+                <motion.button
+                    initial={{ opacity: 0, y: 40 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    transition={{ duration: 0.3, ease: 'easeInOut' }}
+                    type="submit"
+                    aria-label="Envoyer l'email"
+                    className="w-2/3 text-white bg-gradient-to-br from-cyan-300/80 via-blue-500 to-indigo-600 relative inline-block px-8 py-3 font-medium rounded-lg shadow-lg hover:shadow-xl transition-shadow items-center justify-center gap-2 md:w-1/2"
                 >
                     {isSubmitting ? "Envoi de l'email..." : "Envoyer l'email"}
-                </button>
+                </motion.button>
+
                 </form>
             </motion.div>
 
