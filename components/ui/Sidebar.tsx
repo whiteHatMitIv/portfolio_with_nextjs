@@ -4,29 +4,25 @@ import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Navigation from "../Navigation";
-import { Close, Menu } from "@mui/icons-material";
+import { Menu } from "@mui/icons-material";
 
 export default function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState<boolean | null>(null);
 
-  // Détection de la taille de l'écran
   useEffect(() => {
     const checkIsMobile = () => {
       setIsMobile(window.innerWidth <= 768);
     };
 
-    // Vérifier la taille de l'écran au montage
     checkIsMobile();
-
-    // Ajouter un écouteur d'événement pour les changements de taille
     window.addEventListener("resize", checkIsMobile);
-
-    // Nettoyer l'écouteur d'événement lors du démontage
     return () => window.removeEventListener("resize", checkIsMobile);
   }, []);
 
   const toggleOpen = () => setIsOpen(!isOpen);
+
+  if (isMobile === null) return null;
 
   return (
     <div className="relative flex">
@@ -41,7 +37,7 @@ export default function Sidebar() {
       )}
 
       <motion.div
-        initial={isMobile ? { x: '-100%', width: '16rem' } : { width: '7vw' }}
+        initial={isMobile ? { x: '-100%' } : { width: '7vw' }}
         animate={isMobile ? 
           { x: isOpen ? 0 : '-100%', width: '16rem' } : 
           { width: isOpen ? '18vw' : '7vw' }
@@ -52,35 +48,38 @@ export default function Sidebar() {
         }`}
         style={isMobile ? { width: '16rem' } : undefined}
       >
-        <Navigation isOpen={isOpen} />
+        <Navigation isOpen={isOpen} toggleOpen={isMobile ? toggleOpen : () => {} } />
       </motion.div>
 
       {!isMobile && (
         <motion.button
           onClick={toggleOpen}
           transition={{ duration: 0.3 }}
-          className="absolute top-1/2 left-full transform -translate-y-1/2 ml-2 bg-gray-800 text-white p-2 rounded-full shadow-lg z-50"
+          className="absolute top-1/2 -right-4 transform -translate-y-1/2 ml-2 bg-gray-800 text-white p-2 rounded-full shadow-lg z-50"
         >
           {isOpen ? <ChevronLeft size={24} /> : <ChevronRight size={24} />}
         </motion.button>
       )}
 
-      <div className="md:hidden relative flex-1 px-3 py-3">
-        <div className="absolute inset-0 flex justify-evenly pointer-events-none z-[-1]">
-          {[...Array(4)].map((_, i) => (
-            <div 
-              key={i}
-              className="w-px h-full bg-border_color"
-            />
-          ))}
+      {isMobile && (
+        <div className="md:hidden relative flex-1 px-3 py-3">
+          <div className="absolute inset-0 flex justify-evenly pointer-events-none z-[-1]">
+            {[...Array(4)].map((_, i) => (
+              <div 
+                key={i}
+                className="w-px h-full bg-border_color"
+              />
+            ))}
+          </div>
+          <button 
+            aria-label="Ouvrir le menu"
+            className="flex bg-backgroundCard items-center justify-center w-12 h-12 p-2 rounded-full text-white z-[60] text-2xl"
+            onClick={toggleOpen}
+          >
+            <Menu fontSize="inherit" />
+          </button>
         </div>
-        <button 
-          className="flex bg-backgroundCard items-center justify-center w-12 h-12 p-2 rounded-full text-white z-[60] text-2xl"
-          onClick={toggleOpen}
-        >
-          {isOpen ? <Close fontSize="inherit" /> : <Menu fontSize="inherit" />}
-        </button>
-      </div>
+      )}
     </div>
   );
 }
