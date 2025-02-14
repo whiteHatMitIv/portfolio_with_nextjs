@@ -59,7 +59,7 @@ const Portfolio = () => {
             <motion.div
               key={project.id}
               variants={cardVariants}
-              className='flex flex-col relative border border-border_color border-t-8 h-[60vh] rounded-lg transition-all duration-500 ease-in-out hover:border-t-[#1E90FF] hover:shadow-2xl hover:shadow-[#1E90FF]/20 overflow-hidden group hover:translate-y-2 hover:cursor-pointer'
+              className='flex flex-col relative border border-border_color border-t-8 h-[40vh] md:h-[60vh] rounded-lg transition-all duration-500 ease-in-out hover:border-t-[#1E90FF] hover:shadow-2xl hover:shadow-[#1E90FF]/20 overflow-hidden group hover:translate-y-2 hover:cursor-pointer'
             >
               <div className='h-[50%] relative overflow-hidden border-b border-b-border_color'>
                 <Image

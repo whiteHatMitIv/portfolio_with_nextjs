@@ -36,7 +36,7 @@ const Contact = () => {
 
   return (
     <motion.div 
-      className='p-11'
+      className='p-11 w-full'
       initial="hidden"
       animate="visible"
       variants={containerVariants}
@@ -44,9 +44,9 @@ const Contact = () => {
       <Title title='Contact' span='Contact' />
       
       <section>
-        <div className='pt-16 flex justify-between'>
+        <div className='pt-16 flex flex-col w-full md:flex-row justify-between'>
           <motion.div 
-            className='flex flex-col w-1/2'
+            className='flex flex-col md:w-1/2'
             variants={containerVariants}
           >
             <motion.h4 
@@ -92,7 +92,7 @@ const Contact = () => {
               </motion.div>
               <Button
                 variant={"contact"}
-                className='button-gradient text-white'
+                className='button-gradient text-white max-md:w-2/3'
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -103,13 +103,13 @@ const Contact = () => {
 
           {/* Cartes de contact */}
           <motion.div 
-            className='flex flex-col w-1/2 items-center'
+            className='flex flex-col w-full md:w-1/2 items-center'
             variants={containerVariants}
           >
             {contacts.map((contact, index) => (
               <motion.div 
                 key={contact.id}
-                className='flex w-4/5 items-center rounded-xl px-6 py-5 gap-8 bg-backgroundCard mb-6 first-of-type:mt-12 last-of-type:mb-0'
+                className='flex w-full md:w-4/5 items-center rounded-xl px-6 py-5 gap-8 bg-backgroundCard mb-6 first-of-type:mt-12 last-of-type:mb-0'
                 variants={itemVariants}
                 custom={index}
                 whileHover={{ y: -5 }}

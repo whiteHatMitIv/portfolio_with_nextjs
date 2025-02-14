@@ -21,7 +21,7 @@ const Resume = () => {
     <section className="p-11">
       <Title title="Resume" span="Resume" subTitle={true} />
 
-      <div className="mt-16 ml-8">
+      <div className="mt-16 md:ml-8">
         <Title title="Parcours Professionnel" smallTitle={true} icon={Briefcase} />
         <div className="ml-1 my-8">
           <motion.ol
@@ -39,7 +39,7 @@ const Resume = () => {
               <motion.li
                 key={work.id}
                 variants={timelineItemVariants}
-                className="mb-10 ms-4 w-1/2 text-justify"
+                className="mb-10 ms-4 w-full md:w-1/2 text-justify"
               >
                 <div className="absolute w-3 h-3 bg-border_color rounded-full mt-1.5 -start-1.5 border border-border_color" />
                 <time className="mb-1 text-sm font-normal leading-none text-gray-500">
@@ -54,7 +54,7 @@ const Resume = () => {
         </div>
       </div>
 
-      <div className="mt-10 ml-8">
+      <div className="mt-10 md:ml-8">
         <Title title="Parcours Académique" smallTitle={true} icon={GraduationCap} />
         <div className="ml-1 mt-8">
           <motion.ol
@@ -72,7 +72,7 @@ const Resume = () => {
               <motion.li
                 key={diplome.id}
                 variants={timelineItemVariants}
-                className="mb-10 ms-4 w-1/2 text-justify last-of-type:mb-0"
+                className="mb-10 ms-4 w-full md:w-1/2 text-justify last-of-type:mb-0"
               >
                 <div className="absolute w-3 h-3 bg-border_color rounded-full mt-1.5 -start-1.5 border border-border_color" />
                 <time className="mb-1 text-sm font-normal leading-none text-gray-500">

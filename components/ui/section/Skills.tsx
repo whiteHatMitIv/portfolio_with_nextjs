@@ -10,7 +10,7 @@ const Skills = () => {
     <section>
         <div className="p-11">
             <Title title="Compétences" span="Compétences" />
-            <div className="pt-16 grid grid-cols-2 gap-y-4 gap-x-8">
+            <div className="pt-16 grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-8">
                 {skills.map((skill, index) => {
                     return (
                         <motion.div

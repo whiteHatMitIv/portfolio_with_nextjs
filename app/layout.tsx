@@ -46,7 +46,7 @@ export default function RootLayout({
       <body className="font-body flex flex-col md:flex-row w-screen h-screen overflow-hidden">
         <Sidebar />
 
-        <main id="main-content" className="relative flex-1 h-screen overflow-y-auto">
+        <main id="main-content" className="relative flex-1 max-md:justify-center h-screen overflow-y-auto">
           <div className="relative min-h-full max-md:flex">
             <div className="absolute inset-0 flex justify-evenly pointer-events-none z-[-1]">
               {[...Array(4)].map((_, i) => (
