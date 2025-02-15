@@ -78,7 +78,7 @@ const ContactForm = () => {
 
     return (
         <motion.div 
-        className='p-11 w-full'
+        className='p-6 max-md:pt-14 w-full'
         initial="hidden"
         animate="visible"
         variants={containerVariants}

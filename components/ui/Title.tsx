@@ -13,7 +13,7 @@ interface TitleProps {
 
 const Title = ({ title, span, subTitle = false, smallTitle = false, icon: Icon }: TitleProps): ReactElement => {
   const titleStyles = "styleh2 font-heading text-color_bali text-4xl md:text-5xl font-semibold uppercase tracking-[2px] pb-1";
-  const spanStyles = "absolute font-bold text-titleSpanColor text-5xl md:text-6xl left-0 top-1/4 -z-1 opacity-40";
+  const spanStyles = "absolute max-md:hidden font-bold text-titleSpanColor text-5xl md:text-6xl left-0 top-1/4 -z-1 opacity-40";
 
   const titleAnimation = {
     initial: { opacity: 0, y: -20 },

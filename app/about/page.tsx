@@ -5,7 +5,7 @@ import React from 'react'
 
 const About = () => {
   return (
-    <div className='p-6 max-md:w-screen md:p-11'>
+    <div className='p-6 max-md:pt-14 max-md:w-screen md:p-11'>
       <div>
         <Title title='Qui suis-je?' span='Qui suis-je?' />
         <ImageSection  />

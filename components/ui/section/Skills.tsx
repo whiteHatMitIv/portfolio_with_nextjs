@@ -8,7 +8,7 @@ import ProgressBar from "../ProgressBar"
 const Skills = () => {
   return (
     <section>
-        <div className="p-11">
+        <div className="p-8 max-md:pt-14">
             <Title title="Compétences" span="Compétences" />
             <div className="pt-16 grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-8">
                 {skills.map((skill, index) => {

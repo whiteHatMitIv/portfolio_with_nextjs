@@ -62,21 +62,13 @@ export default function Sidebar() {
       )}
 
       {isMobile && (
-        <div className="md:hidden relative flex-1 px-3 py-3">
-          <div className="absolute inset-0 flex justify-evenly pointer-events-none z-[-1]">
-            {[...Array(4)].map((_, i) => (
-              <div 
-                key={i}
-                className="w-px h-full bg-border_color"
-              />
-            ))}
-          </div>
+        <div className="md:hidden fixed top-3 left-3 z-50">
           <button 
             aria-label="Ouvrir le menu"
-            className="flex bg-backgroundCard items-center justify-center w-12 h-12 p-2 rounded-full text-white z-[60] text-2xl"
+            className="flex bg-backgroundCard items-center justify-center w-10 h-10 p-2 rounded-full text-white shadow-lg hover:bg-opacity-80 transition-all"
             onClick={toggleOpen}
           >
-            <Menu fontSize="inherit" />
+            <Menu fontSize="medium" className="text-lg" />
           </button>
         </div>
       )}

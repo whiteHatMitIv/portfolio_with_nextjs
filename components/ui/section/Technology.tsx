@@ -30,7 +30,7 @@ const cardVariants = {
 
 const Technology = () => {
   return (
-    <div className="p-11">
+    <div className="p-8">
       <section className="relative z-10">
         <Title title="Framework" span="Framework" subTitle={true} />
         

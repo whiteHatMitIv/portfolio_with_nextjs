@@ -18,7 +18,7 @@ const Resume = () => {
   };
 
   return (
-    <section className="p-11">
+    <section className="p-8">
       <Title title="Resume" span="Resume" subTitle={true} />
 
       <div className="mt-16 md:ml-8">

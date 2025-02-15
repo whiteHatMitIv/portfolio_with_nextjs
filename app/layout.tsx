@@ -53,7 +53,7 @@ export default function RootLayout({
               {[...Array(4)].map((_, i) => (
                 <div 
                   key={i}
-                  className="w-px h-full bg-border_color"
+                  className="w-px h-full bg-border_color max-md:opacity-70"
                 />
               ))}
             </div>
