@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Navigation from "../Navigation";
-import { Menu } from "@mui/icons-material";
+import { Close, Menu } from "@mui/icons-material";
 
 export default function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -68,7 +68,10 @@ export default function Sidebar() {
             className="flex bg-backgroundCard items-center justify-center w-10 h-10 p-2 rounded-full text-white shadow-lg hover:bg-opacity-80 transition-all"
             onClick={toggleOpen}
           >
-            <Menu fontSize="medium" className="text-lg" />
+            {isOpen 
+              ? <Close fontSize="medium" className="text-lg" />
+              : <Menu fontSize="medium" className="text-lg" />
+            }
           </button>
         </div>
       )}
